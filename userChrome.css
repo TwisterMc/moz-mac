@@ -1,0 +1,166 @@
+/* 
+ * Moz-Mac Firefox Theme
+ * by Thomas McMahon / @twistermc / twistermc.com
+ * v 1.0 
+ */
+ 
+ 
+.tab-background,
+.tabbrowser-tab,
+#nav-bar,
+#navigator-toolbox,
+#PersonalToolbar,
+#urlbar,
+#urlbar .urlbar-input-box,
+.tabbrowser-tab,
+#tabbrowser-tabs,
+#TabsToolbar,
+tab,
+.tabbrowser-tab::after,
+.tabbrowser-tab::before,
+.tabbrowser-tab[first-tab],
+#toolbar-menubar,
+findbar,
+.titlebar-spacer {
+/*   border-color: transparent !important; */
+/*   border-image: none !important; */
+/*   box-shadow: none !important; */
+/*   outline: 0 !important; */
+/*   box-sizing: border-box !important; */
+  border: none !important;
+}
+
+/* 
+#PersonalToolbar,
+#nav-bar {
+	background: #ffffff !important;
+}
+ */
+ 
+/* 
+ #urlbar {
+ 	background: transparent !important;
+ }
+ */
+
+#TabsToolbar,
+.tab-background-inner,
+#nav-bar,
+.theme-dark,
+.theme-light,
+slider,
+.CodeMirror,
+.devtools-toolbar,
+.message,
+.theme-body,
+.table-widget-empty-text,
+findbar,
+#PersonalToolbar {
+   -moz-appearance: -moz-mac-vibrancy-light !important;
+}
+
+/* .theme-body {
+   background: transparent !important;
+}
+ */
+/* 
+.tabbrowser-tab:not([selected]):hover {
+    --tab-line-color: #9500FF !important;
+}
+*/
+
+.titlebar-spacer {
+	width: 10px !important;
+}
+/* 
+#new-tab-button,
+#alltabs-button {
+  border-left: 0px solid #000 !important;
+} */
+
+
+#tabs-newtab-button,
+toolbarbutton {
+	color: #333 !important;
+}
+
+/* Fabicon icon when mouse over to pinned inactive tab grayscale(15%) */
+.tabbrowser-tab:hover .tab-icon-image[pinned] {
+ filter: grayscale(15%) !important;
+}
+
+/* Fabicon icon on pinned inactive tab grayscale(35%) */
+.tabbrowser-tab .tab-icon-image[pinned] {
+ filter: grayscale(35%) !important;
+}
+
+/* Favicon icon when mouse over over inactive tab grayscale(15%) */
+.tabbrowser-tab:hover .tab-icon-image:not([selected=true]):not([pinned]) {
+ filter: grayscale(15%) !important;
+}
+
+/* Gray out the favicon icon on the inactive tab */
+.tabbrowser-tab .tab-icon-image:not([selected=true]):not([pinned]) {
+ filter: grayscale(100%) !important;
+}
+
+/* Tab labels */
+tab {
+	color: #333 !important;
+}
+tab:hover {
+	color: #000 !important;
+}
+tab[selected] {
+	color: #000 !important;
+}
+
+.tabbrowser-tab:not(:hover) .tab-close-button{ 
+    display:none;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button{
+    display:block !important;
+    transition: 0.9s;
+}
+
+.tabbrowser-tab:not([pinned]):hover  .tab-icon-image {
+  display: none !important;
+}
+
+.tabbrowser-tab:hover  .tab-throbber,
+.tabbrowser-tab:hover  .tab-icon-image,
+.tabbrowser-tab:hover .tab-sharing-icon-overlay,
+.tabbrowser-tab:hover  .tab-icon-overlay,
+.tabbrowser-tab:hover  .tab-label-container,
+.tabbrowser-tab:hover  .tab-icon-sound {
+   -moz-box-ordinal-group: 2 !important;
+}
+
+.tabbrowser-tab .tab-close-button {
+  margin-left: -2px !important;
+  margin-right: 4px !important;
+}
+
+/* Put refresh button "inside" address bar */
+#page-action-buttons {
+    margin-right: 26px !important;
+}
+
+
+#stop-reload-button .toolbarbutton-icon {
+    padding: 8px 6px !important;
+}
+
+#stop-reload-button {
+    transform: translateX(-36px);
+    margin-right: -32px !important;
+}
+
+#tabbrowser-tabs {
+    --tab-line-color: -moz-menuhover !important;
+}
+
+.tab-line:not([selected=true]) {
+    background-color: -moz-mac-focusring !important;
+}
+
