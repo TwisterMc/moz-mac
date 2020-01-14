@@ -1,10 +1,10 @@
-/* 
+/*
  * Moz-Mac Firefox Theme
  * by Thomas McMahon / @twistermc / twistermc.com
- * v 1.0 
+ * v 1.0
  */
- 
- 
+
+
 .tab-background,
 .tabbrowser-tab,
 #nav-bar,
@@ -22,26 +22,8 @@ tab,
 #toolbar-menubar,
 findbar,
 .titlebar-spacer {
-/*   border-color: transparent !important; */
-/*   border-image: none !important; */
-/*   box-shadow: none !important; */
-/*   outline: 0 !important; */
-/*   box-sizing: border-box !important; */
   border: none !important;
 }
-
-/* 
-#PersonalToolbar,
-#nav-bar {
-	background: #ffffff !important;
-}
- */
- 
-/* 
- #urlbar {
- 	background: transparent !important;
- }
- */
 
 #TabsToolbar,
 .tab-background-inner,
@@ -59,25 +41,9 @@ findbar,
    -moz-appearance: -moz-mac-vibrancy-light !important;
 }
 
-/* .theme-body {
-   background: transparent !important;
-}
- */
-/* 
-.tabbrowser-tab:not([selected]):hover {
-    --tab-line-color: #9500FF !important;
-}
-*/
-
 .titlebar-spacer {
 	width: 10px !important;
 }
-/* 
-#new-tab-button,
-#alltabs-button {
-  border-left: 0px solid #000 !important;
-} */
-
 
 #tabs-newtab-button,
 toolbarbutton {
@@ -115,7 +81,7 @@ tab[selected] {
 	color: #000 !important;
 }
 
-.tabbrowser-tab:not(:hover) .tab-close-button{ 
+.tabbrowser-tab:not(:hover) .tab-close-button{
     display:none;
 }
 .tabbrowser-tab:not([pinned]):hover .tab-close-button{
@@ -163,4 +129,3 @@ tab[selected] {
 .tab-line:not([selected=true]) {
     background-color: -moz-mac-focusring !important;
 }
-
