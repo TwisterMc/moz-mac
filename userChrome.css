@@ -41,13 +41,24 @@ findbar,
    -moz-appearance: -moz-mac-vibrancy-light !important;
 }
 
-.titlebar-spacer {
-	width: 10px !important;
+#main-window[lwthemetextcolor="bright"] #TabsToolbar,
+#main-window[lwthemetextcolor="bright"] .tab-background-inner,
+#main-window[lwthemetextcolor="bright"] #nav-bar,
+#main-window[lwthemetextcolor="bright"] .theme-dark,
+#main-window[lwthemetextcolor="bright"] .theme-light,
+#main-window[lwthemetextcolor="bright"] slider,
+#main-window[lwthemetextcolor="bright"] .CodeMirror,
+#main-window[lwthemetextcolor="bright"] .devtools-toolbar,
+#main-window[lwthemetextcolor="bright"] .message,
+#main-window[lwthemetextcolor="bright"] .theme-body,
+#main-window[lwthemetextcolor="bright"] .table-widget-empty-text,
+#main-window[lwthemetextcolor="bright"] findbar,
+#PersonalToolbar {
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
-#tabs-newtab-button,
-toolbarbutton {
-	color: #333 !important;
+.titlebar-spacer {
+	width: 10px !important;
 }
 
 /* Fabicon icon when mouse over to pinned inactive tab grayscale(15%) */
@@ -71,14 +82,25 @@ toolbarbutton {
 }
 
 /* Tab labels */
-tab {
+#main-window[lwthemetextcolor="dark"] tab {
 	color: #333 !important;
 }
-tab:hover {
+#main-window[lwthemetextcolor="dark"] tab:hover {
 	color: #000 !important;
 }
-tab[selected] {
+#main-window[lwthemetextcolor="dark"] tab[selected] {
 	color: #000 !important;
+}
+
+/* Tab labels */
+#main-window[lwthemetextcolor="bright"] tab {
+	color: #ccc !important;
+}
+#main-window[lwthemetextcolor="bright"] tab:hover {
+	color: #fff !important;
+}
+#main-window[lwthemetextcolor="bright"] tab[selected] {
+	color: #fff !important;
 }
 
 .tabbrowser-tab:not(:hover) .tab-close-button{
