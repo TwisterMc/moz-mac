@@ -37,7 +37,6 @@ findbar,
     -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
-
 #TabsToolbar,
 .tab-background-inner,
 #nav-bar,
@@ -74,7 +73,6 @@ findbar,
      -moz-appearance: -moz-mac-vibrancy-light !important;
      color: #000 !important;
 }
-
 
 .titlebar-spacer {
 	width: 10px !important;
