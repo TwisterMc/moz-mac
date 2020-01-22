@@ -1,0 +1,170 @@
+/*
+ * Moz-Mac Firefox Theme
+ * by Thomas McMahon / @twistermc / twistermc.com
+ * v 1.0
+ */
+
+
+.tab-background,
+.tabbrowser-tab,
+#nav-bar,
+#navigator-toolbox,
+#PersonalToolbar,
+#urlbar,
+#urlbar .urlbar-input-box,
+.tabbrowser-tab,
+#tabbrowser-tabs,
+#TabsToolbar,
+tab,
+.tabbrowser-tab::after,
+.tabbrowser-tab::before,
+.tabbrowser-tab[first-tab],
+#toolbar-menubar,
+findbar,
+.titlebar-spacer {
+  border: none !important;
+}
+
+#main-window:not([lwthemetextcolor="bright"]):not([lwthemetextcolor="dark"]) .tab-content {
+    color: #ccc !important;
+}
+
+#main-window:not([lwthemetextcolor="bright"]):not([lwthemetextcolor="dark"]) .tab-content[selected] {
+    color: #fff !important;
+}
+
+#main-window:not([lwthemetextcolor="bright"]):not([lwthemetextcolor="dark"]) #TabsToolbar {
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
+}
+
+#TabsToolbar,
+.tab-background-inner,
+#nav-bar,
+.theme-dark,
+.theme-light,
+slider,
+.CodeMirror,
+.devtools-toolbar,
+.message,
+.theme-body,
+.table-widget-empty-text,
+findbar,
+#PersonalToolbar {
+   -moz-appearance: -moz-mac-vibrancy-light !important;
+}
+
+#main-window[lwthemetextcolor="bright"] #TabsToolbar,
+#main-window[lwthemetextcolor="bright"] .tab-background-inner,
+#main-window[lwthemetextcolor="bright"] #nav-bar,
+#main-window[lwthemetextcolor="bright"] .theme-dark,
+#main-window[lwthemetextcolor="bright"] .theme-light,
+#main-window[lwthemetextcolor="bright"] slider,
+#main-window[lwthemetextcolor="bright"] .CodeMirror,
+#main-window[lwthemetextcolor="bright"] .devtools-toolbar,
+#main-window[lwthemetextcolor="bright"] .message,
+#main-window[lwthemetextcolor="bright"] .theme-body,
+#main-window[lwthemetextcolor="bright"] .table-widget-empty-text,
+#main-window[lwthemetextcolor="bright"] findbar,
+#main-window[lwthemetextcolor="bright"] #PersonalToolbar {
+    -moz-appearance: -moz-mac-vibrancy-dark !important;
+}
+
+#main-window[lwthemetextcolor="bright"][lwt-popup-darktext="true"] #nav-bar {
+     -moz-appearance: -moz-mac-vibrancy-light !important;
+     color: #000 !important;
+}
+
+.titlebar-spacer {
+	width: 10px !important;
+}
+
+/* Fabicon icon when mouse over to pinned inactive tab grayscale(15%) */
+.tabbrowser-tab:hover .tab-icon-image[pinned] {
+ filter: grayscale(15%) !important;
+}
+
+/* Fabicon icon on pinned inactive tab grayscale(35%) */
+.tabbrowser-tab .tab-icon-image[pinned] {
+ filter: grayscale(35%) !important;
+}
+
+/* Favicon icon when mouse over over inactive tab grayscale(15%) */
+.tabbrowser-tab:hover .tab-icon-image:not([selected=true]):not([pinned]) {
+ filter: grayscale(15%) !important;
+}
+
+/* Gray out the favicon icon on the inactive tab */
+.tabbrowser-tab .tab-icon-image:not([selected=true]):not([pinned]) {
+ filter: grayscale(100%) !important;
+}
+
+/* Tab labels */
+#main-window[lwthemetextcolor="dark"] tab {
+	color: #333 !important;
+}
+#main-window[lwthemetextcolor="dark"] tab:hover {
+	color: #000 !important;
+}
+#main-window[lwthemetextcolor="dark"] tab[selected] {
+	color: #000 !important;
+}
+
+/* Tab labels */
+#main-window[lwthemetextcolor="bright"] tab {
+	color: #ccc !important;
+}
+#main-window[lwthemetextcolor="bright"] tab:hover {
+	color: #fff !important;
+}
+#main-window[lwthemetextcolor="bright"] tab[selected] {
+	color: #fff !important;
+}
+
+.tabbrowser-tab:not(:hover) .tab-close-button{
+    display:none;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button{
+    display:block !important;
+    transition: 0.9s;
+}
+
+.tabbrowser-tab:not([pinned]):hover  .tab-icon-image {
+  display: none !important;
+}
+
+.tabbrowser-tab:hover  .tab-throbber,
+.tabbrowser-tab:hover  .tab-icon-image,
+.tabbrowser-tab:hover .tab-sharing-icon-overlay,
+.tabbrowser-tab:hover  .tab-icon-overlay,
+.tabbrowser-tab:hover  .tab-label-container,
+.tabbrowser-tab:hover  .tab-icon-sound {
+   -moz-box-ordinal-group: 2 !important;
+}
+
+.tabbrowser-tab .tab-close-button {
+  margin-left: -2px !important;
+  margin-right: 4px !important;
+}
+
+/* Put refresh button "inside" address bar */
+#page-action-buttons {
+    margin-right: 26px !important;
+}
+
+
+#stop-reload-button .toolbarbutton-icon {
+    padding: 8px 6px !important;
+}
+
+#stop-reload-button {
+    transform: translateX(-36px);
+    margin-right: -32px !important;
+}
+
+#tabbrowser-tabs {
+    --tab-line-color: -moz-menuhover !important;
+}
+
+.tab-line:not([selected=true]) {
+    background-color: -moz-mac-focusring !important;
+}
