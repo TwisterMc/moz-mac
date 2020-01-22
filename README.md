@@ -2,7 +2,7 @@
 ## by Thomas McMahon / @twistermc / twistermc.com
 Translucent Mac Firefox Theme
 
-Screenshot coming soon.
+![screenshots][moz-mac-screenshot.png]
 
 v1.0 - Initial Release
 
