@@ -146,6 +146,12 @@ findbar,
   margin-right: 4px !important;
 }
 
+.tab-icon-image:not([src]) {
+    width: 16px !important;
+    height: 16px !important;
+    display: block !important;
+}
+
 /* Put refresh button "inside" address bar */
 #page-action-buttons {
     margin-right: 26px !important;
