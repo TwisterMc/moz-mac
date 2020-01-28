@@ -2,6 +2,8 @@
 ## by Thomas McMahon / @twistermc / twistermc.com
 Translucent Mac Firefox Theme
 
+Info: https://www.twistermc.com/44353/moz-mac-a-translucent-firefox-theme/
+
 ![screenshots](moz-mac-screenshot.png)
 
 v1.0 - Initial Release
