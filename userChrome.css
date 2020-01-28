@@ -154,17 +154,17 @@ findbar,
 
 /* Put refresh button "inside" address bar */
 #page-action-buttons {
-    margin-right: 26px !important;
+    margin-right: 34px !important;
 }
 
 
 #stop-reload-button .toolbarbutton-icon {
-    padding: 8px 6px !important;
+    padding: 4px 4px !important;
 }
 
 #stop-reload-button {
-    transform: translateX(-36px);
-    margin-right: -32px !important;
+    transform: translateX(-38px);
+    margin-right: -34px !important;
 }
 
 #tabbrowser-tabs {
@@ -173,4 +173,11 @@ findbar,
 
 .tab-line:not([selected=true]) {
     background-color: -moz-mac-focusring !important;
+}
+
+.toolbarbutton-1#reload-button,
+.toolbarbutton-1#stop-button {
+    height: 12px !important;
+    width: 30px !important;
+    padding: 6px 0px !important;
 }
