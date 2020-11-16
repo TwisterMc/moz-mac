@@ -1,7 +1,7 @@
 /*
  * Moz-Mac Firefox Theme
  * by Thomas McMahon / @twistermc / twistermc.com
- * v 1.0.1
+ * v 1.0.2
  */
 
 
@@ -189,3 +189,9 @@ findbar,
 #main-window[lwthemetextcolor="dark"] tab[selected] .tab-content{
     background-color: rgba(255, 255, 255, .25);
 }
+
+.theme-body {
+   background: transparent !important;
+}
+
+#main-window{ background-color: transparent !important }
