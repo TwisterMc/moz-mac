@@ -37,6 +37,10 @@ findbar,
     -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[selected="true"]:-moz-lwthemefi{
+	background: transparent !important;
+}
+
 #TabsToolbar,
 .tab-background-inner,
 #nav-bar,
@@ -153,6 +157,7 @@ findbar,
 }
 
 /* Put refresh button "inside" address bar */
+/* 
 #page-action-buttons {
     margin-right: 34px !important;
 }
@@ -167,6 +172,14 @@ findbar,
     margin-right: -34px !important;
 }
 
+.toolbarbutton-1#reload-button,
+.toolbarbutton-1#stop-button {
+    height: 12px !important;
+    width: 30px !important;
+    padding: 6px 0px !important;
+}
+ */
+
 #tabbrowser-tabs {
     --tab-line-color: -moz-menuhover !important;
 }
@@ -175,17 +188,18 @@ findbar,
     background-color: -moz-mac-focusring !important;
 }
 
-.toolbarbutton-1#reload-button,
-.toolbarbutton-1#stop-button {
-    height: 12px !important;
-    width: 30px !important;
-    padding: 6px 0px !important;
-}
+
 
 #main-window[lwthemetextcolor="bright"] tab[selected] .tab-content{
-    background-color: rgba(255, 255, 255, .1)
+    background-color: rgba(255, 255, 255, .1) !important; 
 }
 
 #main-window[lwthemetextcolor="dark"] tab[selected] .tab-content{
-    background-color: rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, .25) !important;
 }
+
+.theme-body {
+   background: transparent !important;
+}
+
+#main-window{ background-color: transparent !important }
