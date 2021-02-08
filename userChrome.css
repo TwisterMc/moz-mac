@@ -1,7 +1,7 @@
 /*
  * Moz-Mac Firefox Theme
  * by Thomas McMahon / @twistermc / twistermc.com
- * v 1.0.1
+ * v 1.0.2.1
  */
 
 
@@ -157,7 +157,7 @@ findbar,
 }
 
 /* Put refresh button "inside" address bar */
-/* 
+/*
 #page-action-buttons {
     margin-right: 34px !important;
 }
@@ -191,7 +191,7 @@ findbar,
 
 
 #main-window[lwthemetextcolor="bright"] tab[selected] .tab-content{
-    background-color: rgba(255, 255, 255, .1) !important; 
+    background-color: rgba(255, 255, 255, .1) !important;
 }
 
 #main-window[lwthemetextcolor="dark"] tab[selected] .tab-content{
