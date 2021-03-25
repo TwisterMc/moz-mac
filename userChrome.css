@@ -37,8 +37,21 @@ findbar,
     -moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
-#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[selected="true"]:-moz-lwthemefi{
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[selected="true"]:-moz-lwthemefi, 
+#PersonalToolbar:not(:-moz-lwtheme):-moz-window-inactive, #nav-bar:not(:-moz-lwtheme):-moz-window-inactive {
 	background: transparent !important;
+}
+
+#PersonalToolbar:not(:-moz-lwtheme):-moz-window-inactive,
+#nav-bar:not(:-moz-lwtheme):-moz-window-inactive,
+.tab-background[multiselected="true"],
+.tab-background[selected="true"],
+.browser-toolbar:not(.titlebar-color),
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[multiselected="true"]:-moz-lwtheme, 
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[selected="true"]:-moz-lwtheme {
+	background-color: transparent !important;
+	background-image: none !important;
+
 }
 
 #TabsToolbar,
