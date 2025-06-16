@@ -8,7 +8,7 @@
 :root {
   /* Transparency settings (0 = transparent, 1 = opaque) */
   --window-transparency: 0.0;
-  --toolbar-transparency: 0.5;
+  --toolbar-transparency: 0.6;
   --content-transparency: 0.5;
   --urlbar-transparency: 0.0;
 
@@ -56,9 +56,7 @@
 #navigator-toolbox,
 #nav-bar,
 #TabsToolbar,
-#PersonalToolbar,
-#sidebar-box,
-#sidebar {
+#PersonalToolbar {
   appearance: none !important;
   -moz-appearance: none !important;
   background-color: rgba(var(--bg-color), var(--toolbar-transparency)) !important;
@@ -143,14 +141,6 @@
   display: block !important;
 }
 
-.toolbarbutton-1#reload-button,
-.toolbarbutton-1#stop-button {
-    height: 12px !important;
-    width: 30px !important;
-    padding: 6px 0px !important;
-}
- */
-
 #tabbrowser-tabs {
     --tab-line-color: -moz-menuhover !important;
 }
@@ -190,8 +180,46 @@
   -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(calc(var(--glass-brightness) + 0.1)) !important;
 }
 
+/* Sidebar transparency */
+#sidebar-box,
+#sidebar,
+#sidebar-header,
+.sidebar-panel {
+  background-color: transparent !important;
+  color: rgb(var(--text-color)) !important;
+}
+
+/* Force transparency on all sidebar elements */
+#sidebar-box * {
+  background-color: transparent !important;
+}
+
+/* Sidebar internal contents */
+#sidebar-box #sidebar {
+  background-color: rgba(var(--bg-color), var(--toolbar-transparency)) !important;
+  backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
+  -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
+}
+
 /* Sidebar splitter */
 #sidebar-splitter {
-  border-color: rgba(var(--text-color), 0.1) !important;
   width: 1px !important;
+  background-color: rgba(var(--text-color), 0.1) !important;
+}
+
+/* Tree views inside sidebar */
+#sidebar .tree-rows,
+#sidebar treechildren::-moz-tree-row {
+  background-color: transparent !important;
+}
+
+/* Selected items in sidebar */
+#sidebar treechildren::-moz-tree-row(selected),
+#sidebar .sidebar-placesTree:hover {
+  background-color: rgba(var(--bg-color), calc(var(--toolbar-transparency) + 0.1)) !important;
+}
+
+/* Hover effects in sidebar */
+#sidebar treechildren::-moz-tree-row(hover) {
+  background-color: rgba(var(--bg-color), calc(var(--toolbar-transparency) + 0.05)) !important;
 }
