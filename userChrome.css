@@ -55,7 +55,10 @@
 /* Toolbar and content areas */
 #navigator-toolbox,
 #nav-bar,
-#TabsToolbar {
+#TabsToolbar,
+#PersonalToolbar,
+#sidebar-box,
+#sidebar {
   appearance: none !important;
   -moz-appearance: none !important;
   background-color: rgba(var(--bg-color), var(--toolbar-transparency)) !important;
@@ -70,12 +73,37 @@
 }
 
 /* URL bar */
-#urlbar,
+/* #urlbar,
+#urlbar-background,
+#urlbar-input-container,
 #urlbar-input {
-  /* background-color: rgba(var(--urlbar-bg), var(--urlbar-transparency)) !important; */
+  background-color: transparent !important;
   color: rgb(var(--text-color)) !important;
   backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
   -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
+} */
+
+/* URL bar when focused/active */
+/* #urlbar[focused="true"],
+#urlbar[focused="true"] #urlbar-background,
+#urlbar[focused="true"] #urlbar-input-container {
+  background-color: rgb(var(--urlbar-bg)) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+} */
+
+/* URL bar input box */
+/* #urlbar-container,
+.urlbar-input-box {
+  background-color: transparent !important;
+} */
+
+
+
+/* Remove any box shadows or borders from URL bar */
+#urlbar {
+  box-shadow: none !important;
+  border: none !important;
 }
 
 /* Tabs */
@@ -146,3 +174,24 @@
 }
 
 #main-window{ background-color: transparent !important }
+
+/* Bookmarks and Sidebar specific styles */
+.bookmark-item,
+.sidebar-panel,
+#sidebar-header {
+  background-color: transparent !important;
+  color: rgb(var(--text-color)) !important;
+}
+
+/* Hover effects for bookmark items */
+.bookmark-item:hover {
+  background-color: rgba(var(--bg-color), calc(var(--toolbar-transparency) + 0.1)) !important;
+  backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(calc(var(--glass-brightness) + 0.1)) !important;
+  -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(calc(var(--glass-brightness) + 0.1)) !important;
+}
+
+/* Sidebar splitter */
+#sidebar-splitter {
+  border-color: rgba(var(--text-color), 0.1) !important;
+  width: 1px !important;
+}
