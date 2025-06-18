@@ -1,7 +1,7 @@
 /*
  * Moz-Mac Firefox Theme
  * by Thomas McMahon / @twistermc / twistermc.com
- * v 2.0.0
+ * v 2.1.0
  */
 
 /* Theme variables */
@@ -11,6 +11,7 @@
   --toolbar-transparency: 0.6;
   --content-transparency: 0.5;
   --urlbar-transparency: 0.0;
+  --bookmark-transparency: 0.7;
 
   /* Blur effect settings */
   --blur-strength: 10px;          /* Strength of the blur effect */
@@ -43,20 +44,15 @@
 }
 
 /* Basic window setup */
-#main-window {
-  appearance: none !important;
-  -moz-appearance: none !important;
-  background-color: rgba(var(--bg-color), var(--window-transparency)) !important;
-  color: rgb(var(--text-color)) !important;
-  backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
-  -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
-}
-
 /* Toolbar and content areas */
+#main-window,
+#browser,
 #navigator-toolbox,
 #nav-bar,
 #TabsToolbar,
-#PersonalToolbar {
+#PersonalToolbar,
+#sidebar-main,
+#sidebar-box {
   appearance: none !important;
   -moz-appearance: none !important;
   background-color: rgba(var(--bg-color), var(--toolbar-transparency)) !important;
@@ -65,37 +61,20 @@
   -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
 }
 
+menupopup {
+  background-color: rgba(var(--bg-color), var(--bookmark-transparency)) !important;
+  --panel-background: rgba(var(--bg-color), var(--bookmark-transparency)) !important;
+  color: rgb(var(--text-color)) !important;
+  backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
+  -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
+  border-radius: 10px !important;
+} 
+
+
 /* Content area */
 #content-deck {
   background-color: rgba(var(--bg-color), var(--content-transparency)) !important;
 }
-
-/* URL bar */
-/* #urlbar,
-#urlbar-background,
-#urlbar-input-container,
-#urlbar-input {
-  background-color: transparent !important;
-  color: rgb(var(--text-color)) !important;
-  backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
-  -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
-} */
-
-/* URL bar when focused/active */
-/* #urlbar[focused="true"],
-#urlbar[focused="true"] #urlbar-background,
-#urlbar[focused="true"] #urlbar-input-container {
-  background-color: rgb(var(--urlbar-bg)) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-} */
-
-/* URL bar input box */
-/* #urlbar-container,
-.urlbar-input-box {
-  background-color: transparent !important;
-} */
-
 
 
 /* Remove any box shadows or borders from URL bar */
@@ -108,8 +87,6 @@
 .tabbrowser-tab {
   color: rgb(var(--text-color)) !important;
 }
-
-
 
 /* Remove borders */
 .tab-background,
@@ -149,8 +126,6 @@
     background-color: -moz-mac-focusring !important;
 }
 
-
-
 #main-window[lwthemetextcolor="bright"] tab[selected] .tab-content{
     background-color: rgba(255, 255, 255, .1) !important;
 }
@@ -171,55 +146,4 @@
 #sidebar-header {
   background-color: transparent !important;
   color: rgb(var(--text-color)) !important;
-}
-
-/* Hover effects for bookmark items */
-.bookmark-item:hover {
-  background-color: rgba(var(--bg-color), calc(var(--toolbar-transparency) + 0.1)) !important;
-  backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(calc(var(--glass-brightness) + 0.1)) !important;
-  -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(calc(var(--glass-brightness) + 0.1)) !important;
-}
-
-/* Sidebar transparency */
-#sidebar-box,
-#sidebar,
-#sidebar-header,
-.sidebar-panel {
-  background-color: transparent !important;
-  color: rgb(var(--text-color)) !important;
-}
-
-/* Force transparency on all sidebar elements */
-#sidebar-box * {
-  background-color: transparent !important;
-}
-
-/* Sidebar internal contents */
-#sidebar-box #sidebar {
-  background-color: rgba(var(--bg-color), var(--toolbar-transparency)) !important;
-  backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
-  -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(var(--glass-saturation)) brightness(var(--glass-brightness)) !important;
-}
-
-/* Sidebar splitter */
-#sidebar-splitter {
-  width: 1px !important;
-  background-color: rgba(var(--text-color), 0.1) !important;
-}
-
-/* Tree views inside sidebar */
-#sidebar .tree-rows,
-#sidebar treechildren::-moz-tree-row {
-  background-color: transparent !important;
-}
-
-/* Selected items in sidebar */
-#sidebar treechildren::-moz-tree-row(selected),
-#sidebar .sidebar-placesTree:hover {
-  background-color: rgba(var(--bg-color), calc(var(--toolbar-transparency) + 0.1)) !important;
-}
-
-/* Hover effects in sidebar */
-#sidebar treechildren::-moz-tree-row(hover) {
-  background-color: rgba(var(--bg-color), calc(var(--toolbar-transparency) + 0.05)) !important;
 }
