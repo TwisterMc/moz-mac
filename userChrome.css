@@ -160,8 +160,7 @@ menupopup {
 }
 
 /* Rounded corners for web pages */
-#tabbrowser-tabbox {
+/* #tabbrowser-tabbox {
   border-top-left-radius: 10px !important;
   overflow: hidden  !important; 
-
-}
+} */
