@@ -147,3 +147,14 @@ menupopup {
   background-color: transparent !important;
   color: rgb(var(--text-color)) !important;
 }
+
+:root:not([privatebrowsingmode]) :is(toolbarbutton, toolbarpaletteitem) ~ #tabbrowser-tabs, :root[privatebrowsingmode] :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
+  border-inline-start: none !important;
+  padding-inline-start: none !important;
+  margin-inline-start: none !important;
+}
+
+/* Change tab text color when window is not in focus */
+:root:-moz-window-inactive #TabsToolbar .tabbrowser-tab .tab-label {
+  opacity: .5 !important; 
+}
